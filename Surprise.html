@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.main{
+				position: absolute;
+				top:600px;
+				left:200px;
+				width:600px;
+				height:600px;
+				border:3px solid purple;
+				border-radius: 10%;
+				background-color: white;
+				font-size: 60px;
+				text-align: center;
+			}
+			.btn{
+				width:150px;
+				height:70px;
+				border: 0;
+				color: white;
+				border-radius: 5%;
+				font-size: 50px;
+			}
+			.end{
+				position: absolute;
+				right:0;
+				bottom: 0;
+				width:100px;
+				height:50px;
+				border: 0;
+				border-radius: 10%;
+				font-size: 30px;
+				background-color: darkred;
+				color: white;
+			}
+		</style>
+	</head>
+	<body style="background: url(img.png);width:1000px;border: 1px solid white;height: 1800px;">
+		<span id="spa" class="main">
+			<p style="font-size: 62px;">请问你是否年满18岁</p>
+			<br>
+		<button class="btn" style="background-color: deeppink;" onclick="t()">是</button>
+		<button class="btn" style="background-color: palevioletred;" onclick="t()">否</button>
+		<button class="end" style="" onclick="t()">关闭</button>
+		</span>
+		<script>
+			var player=document.createElement("video");
+			player.style.width="1000px";
+			player.style.height="1800px";
+			player.src="1.mp4";
+			player.loop="loop";
+			
+			function t(){
+				var bdy =document.getElementById("bdy")
+				document.body.removeChild(document.getElementById("spa"))
+				document.body.style="background: url(img2.png);width:1000px;border: 1px solid white;height: 1800px;"
+				document.body.appendChild(player)
+				player.play()
+			}
+		</script>
+	</body>
+</html>
